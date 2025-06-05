@@ -28,7 +28,7 @@ def check_password(start: int, end: int) -> None:
         password = f"{number:08}"  # noqa: E231
         hash_password = sha256_hash_str(password)
         if hash_password in PASSWORDS_TO_BRUTE_FORCE:
-            print(password)
+            print(f"Found password: {password}")
 
 
 def brute_force_password() -> None:
